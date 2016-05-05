@@ -5,7 +5,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserAction extends ActionSupport {
 	
 	/**
-	 * 
+	 * hh
 	 */
 	private static final long serialVersionUID = 7988995756875725795L;
 
