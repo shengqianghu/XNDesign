@@ -9,9 +9,13 @@
 		<action name="user_*" class="cn.com.xn.action.UserAction" method="{1}">
 			<result name="success" >/index.html</result>
 			<result name="false">/404.html</result>
+			<result name="regist_success">/regist_success</result>
 		</action>
-
-
+		<action name="car_*" class="cn.com.xn.action.CarAction" method="{1}">
+			<result name="success" >/mycar.html</result>
+			<result name="false">/404.html</result>
+			<result name="repairOrder_success">/repairOrder_success.html</result>
+		</action>
 	</package>
 </struts>
 
