@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>The Auto-Tuning Website Template | Repair :: </title>
+<title>The Auto-Tuning Website Template | 404 :: </title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.useso.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
@@ -42,7 +42,7 @@
         <div class="login"> <span><a href="login.html"><img src="images/login.png" alt="" title="login"></a></span> </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
-          <div class="cart"> <a href="mycar.html" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
+          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
         </div>
         <div class="clear"></div>
       </div>
@@ -65,69 +65,37 @@
     </div>
   </div>
   <div class="main">
+  	<h2><font style="color: #888888;font-size: 3em">Please fill the repair table out</font></h2>
     <div class="main1">
-      <div class="boxes">
-        <h2>why us importance of repair</h2>
-        <div class="repair">
-          <section>
-            <ul class="lb-album">
-              <li> <a href="#image-1"> <img src="images/r_pic1.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-1"> <img src="images/r_pic1.jpg" alt=""> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-              <li> <a href="#image-2"> <img src="images/r_pic2.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-2"> <img src="images/r_pic2.jpg" alt=""> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-              <li> <a href="#image-3"> <img src="images/r_pic3.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-3"> <img src="images/r_pic3.jpg" alt="image03"> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-              <li> <a href="#image-4"> <img src="images/r_pic4.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-4"> <img src="images/r_pic4.jpg" alt="image04"> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-            </ul>
-          </section>
-        </div>
-        <div class="repair">
-          <section>
-            <ul class="lb-album">
-              <li> <a href="#image-5"> <img src="images/r_pic5.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-5"> <img src="images/r_pic5.jpg" alt="image05"> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-              <li> <a href="#image-6"> <img src="images/r_pic6.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-6"> <img src="images/r_pic6.jpg" alt="image06"> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-              <li> <a href="#image-7"> <img src="images/r_pic7.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-7"> <img src="images/r_pic7.jpg" alt="image07"> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-              <li> <a href="#image-8"> <img src="images/r_pic8.jpg" alt=""> <span> </span> </a>
-                <div class="lb-overlay" id="image-8"> <img src="images/r_pic8.jpg" alt="image08"> <a href="#page" class="lb-close"> </a> </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
-              </li>
-              <div class="clear"></div>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </div>
+      <form class="form-4" action="car_repairOrder.action" method="post" >
+        
+        <p>
+          <label for="login">Username or email</label>
+          <input type="text" name="userName" placeholder="UserName" required>
+        </p>
+        <p>
+          <label for="telephone:">Telephone</label>
+          <input type="tel" name='telephone' placeholder="telephone number" required >
+        </p>
+        <p>
+          <label >Travel distance </label>
+          <input type="number" name='travelDistance ' placeholder="Travel distance " required min="0" maxlength="8">
+        </p>
+       <p>
+          <label >phenomena</label>
+          <textarea name="phenomena" required></textarea>
+        </p>
+        <p>
+          <input type="submit" name="submit" value="Submit">
+        </p>
+      </form>
+​​       </div>
   </div>
   <div class="footer">
     <div class="f_left">
       <div class="f_nav">
         <ul>
+          <li><a href="">about us</a></li>
           <li><a href="">site map</a></li>
           <li><a href="">customer Service</a></li>
           <li><a href="">search terms</a></li>

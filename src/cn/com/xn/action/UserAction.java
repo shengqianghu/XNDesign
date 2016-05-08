@@ -5,7 +5,7 @@ import com.opensymphony.xwork2.ActionSupport;
 public class UserAction extends ActionSupport {
 	
 	/**
-	 * 
+	 * hh
 	 */
 	private static final long serialVersionUID = 7988995756875725795L;
 
@@ -16,8 +16,17 @@ public class UserAction extends ActionSupport {
 		return super.execute();
 	}
 
+	/**
+	 * @return 返回的页面
+	 * 用户登录Action
+	 * 
+	 */
 	public String login(){
-		System.out.println("Hello , You mother fucker!");
 		return SUCCESS;
 	}
+	
+	public String regist(){
+		return "regist_success";
+	}
+	
 }
