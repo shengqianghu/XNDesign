@@ -2,7 +2,6 @@ package cn.com.xn.model;
 
 public class CarKind {
 	private int id;
-	private int number;
 	private String brand;
 	private String country;
 	public int getId() {
@@ -11,12 +10,7 @@ public class CarKind {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+	 
 	public String getBrand() {
 		return brand;
 	}

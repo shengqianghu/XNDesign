@@ -5,9 +5,9 @@ import java.util.Date;
 public class Customer {
 
 	private int id;
-	private int number;
 	private String name;
 	private String userName;
+	private String password;
 	private Date time;
 	private String sex;
 	private String phone;
@@ -17,12 +17,7 @@ public class Customer {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+	 
 	public String getName() {
 		return name;
 	}
@@ -53,6 +48,13 @@ public class Customer {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 	
 	
 }

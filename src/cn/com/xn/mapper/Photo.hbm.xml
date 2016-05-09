@@ -5,7 +5,7 @@
 		<id name="id" column="t_car_photo_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<many-to-one name="car" class="Car" property-ref="number" column="car_number"></many-to-one>
+		<many-to-one name="car" class="Car"  column="car_number"></many-to-one>
 		<property name="photo" column="photo" type="blob" />
 	</class>
 </hibernate-mapping>

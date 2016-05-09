@@ -5,7 +5,6 @@
 		<id name="id" column="t_color_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<property name="number" column="color_number" type="integer" ></property>
 		<property name="color" column="color" type="string" length="20" ></property>
 	</class>
 </hibernate-mapping>

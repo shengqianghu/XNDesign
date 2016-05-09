@@ -7,14 +7,15 @@
 	<package name="default" extends="struts-default" namespace="/">
 
 		<action name="user_*" class="cn.com.xn.action.UserAction" method="{1}">
-			<result name="success" >/index.html</result>
-			<result name="false">/404.html</result>
-			<result name="regist_success">/regist_success</result>
+			<result name="regist" >/regist_success.jsp</result>
+			<result name="success" >/index.jsp</result>
+			<result name="error" >/login.jsp</result>
+			<result name="false">/404.jsp</result>
 		</action>
 		<action name="car_*" class="cn.com.xn.action.CarAction" method="{1}">
-			<result name="success" >/mycar.html</result>
-			<result name="false">/404.html</result>
-			<result name="repairOrder_success">/repairOrder_success.html</result>
+			<result name="success" >/mycar.jsp</result>
+			<result name="false">/404.jsp</result>
+			<result name="repairOrder_success">/repairOrder_success.jsp</result>
 		</action>
 	</package>
 </struts>
