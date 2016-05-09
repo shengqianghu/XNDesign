@@ -17,7 +17,10 @@ public class TestDao  {
 	
 	public List<Test> listTest(String hql){
 		return baseDao.list(hql);
-		
+	}
+	
+	public List<Test> listTest(String hql,Object[] objs){
+		return baseDao.list(hql, objs);
 	}
 
 }

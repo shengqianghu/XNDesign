@@ -5,7 +5,6 @@
 		<id name="id" column="car_kind_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<property name="number" column="number" type="integer" ></property>
 		<property name="brand" column="brand" type="string" length="20" ></property>
 		<property name="country" column="country" type="string" length="50" ></property>
 	</class>

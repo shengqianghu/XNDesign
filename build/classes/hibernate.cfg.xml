@@ -18,7 +18,7 @@
         <mapping resource="cn/com/xn/mapper/Color.hbm.xml" />
         <mapping resource="cn/com/xn/mapper/CarKind.hbm.xml" />
         <mapping resource="cn/com/xn/mapper/Car.hbm.xml" />
-        <mapping resource="cn/com/xn/mapper/customer.hbm.xml" />
+        <mapping resource="cn/com/xn/mapper/Customer.hbm.xml" />
         <mapping resource="cn/com/xn/mapper/CarSize.hbm.xml" />
         <mapping resource="cn/com/xn/mapper/CarColor.hbm.xml" />
         <mapping resource="cn/com/xn/mapper/Photo.hbm.xml" />

@@ -2,7 +2,6 @@ package cn.com.xn.model;
 
 public class CarColor {
 	private int id;
-	private int number;
 	private Car car;
 	private Color color;
 	public int getId() {
@@ -23,12 +22,7 @@ public class CarColor {
 	public void setColor(Color color) {
 		this.color = color;
 	}
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+	 
 	
 	
 

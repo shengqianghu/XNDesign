@@ -5,8 +5,7 @@
 		<id name="id" column="id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<property name="number" column="number" type="integer" ></property>
-		<many-to-one name="carKind" class="CarKind" property-ref="number" column="car_kind_number"></many-to-one>
+		<many-to-one name="carKind" class="CarKind"   column="car_kind_number"></many-to-one>
 		<property name="brand" column="brand_serial" type="string" length="20" ></property>
 		<property name="repertory" column="repertory" type="integer" ></property>
 		<property name="money" column="money" type="float" ></property>

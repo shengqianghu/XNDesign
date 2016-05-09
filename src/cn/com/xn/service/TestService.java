@@ -15,5 +15,10 @@ public class TestService {
 		String hql="from Test";
 		return testDao.listTest(hql);
 	}
+	public List<Test> queryAll(Test test){
+		String hql="from Test t where t.name=?";
+		Object[] objs=new Object[]{test.getName()};
+		return testDao.listTest(hql, objs);
+	}
 
 }

@@ -5,11 +5,11 @@
 		<id name="id" column="t_business_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<many-to-one name="customer" class="Customer" column="customer_number" property-ref="number"></many-to-one>
-		<many-to-one name="Car" class="Car" column="car_number" property-ref="number"></many-to-one>
-		<many-to-one name="carColor" class="CarColor" column="car_color_number" property-ref="number"></many-to-one>
-		<many-to-one name="carSize" class="CarSize" column="car_size_number" property-ref="number"></many-to-one>
-		<property name="quality" column="quality" type="integer"></property>
+		<many-to-one name="customer" class="Customer" column="customer_number"  ></many-to-one>
+		<many-to-one name="Car" class="Car" column="car_number"  ></many-to-one>
+		<many-to-one name="carColor" class="CarColor" column="car_color_number"  ></many-to-one>
+		<many-to-one name="carSize" class="CarSize" column="car_size_number"  ></many-to-one>
+		<property name="cquality" column="quality" type="integer"></property>
 		<property name="buyTime" column="buy_time" type="timestamp"></property>
 		<property name="price" column="price" type="float"></property>
 	</class>

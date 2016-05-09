@@ -7,7 +7,7 @@ public class Business {
 	private Customer customer;
 	private Car car;
 	private int cquality;
-	private Date butTime;
+	private Date buyTime;
 	private CarColor carColor;
 	private CarSize carSize;
 	private float price;
@@ -35,11 +35,12 @@ public class Business {
 	public void setCquality(int cquality) {
 		this.cquality = cquality;
 	}
-	public Date getButTime() {
-		return butTime;
+
+	public Date getBuyTime() {
+		return buyTime;
 	}
-	public void setButTime(Date butTime) {
-		this.butTime = butTime;
+	public void setBuyTime(Date buyTime) {
+		this.buyTime = buyTime;
 	}
 	public CarColor getCarColor() {
 		return carColor;

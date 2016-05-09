@@ -5,11 +5,11 @@
 		<id name="id" column="custo_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<property name="number" column="number" type="integer" ></property>
 		<property name="name" column="name" type="string" length="20" ></property>
 		<property name="userName" column="user_name" type="string" length="50" ></property>
+		<property name="password" column="user_password" type="string" length="50" ></property>
 		<property name="time" column="time" type="timestamp"  ></property>
-		<property name="sex" column="sex" type="string" length="2" ></property>
+		<property name="sex" column="sex" type="string" length="10" ></property>
 		<property name="phone" column="telephone" type="string" length="11" ></property>
 	</class>
 </hibernate-mapping>

@@ -4,7 +4,6 @@ public class CarSize {
 	private int id;
 	private Car car;
 	private Size size;
-	private int number;
 	public int getId() {
 		return id;
 	}
@@ -23,12 +22,7 @@ public class CarSize {
 	public void setSize(Size size) {
 		this.size = size;
 	}
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+ 
 	
 	
 

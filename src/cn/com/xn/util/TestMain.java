@@ -18,7 +18,9 @@ public class TestMain {
 		/*Test test=new Test();
 		test.setName("zhangsan");*/
 		TestService testService=new TestService();
-		List<Test> list=testService.queryAll();
+		Test test=new Test();
+		test.setName("Zhangsan");
+		List<Test> list=testService.queryAll(test);
 		System.out.println(list);
 		
 	}

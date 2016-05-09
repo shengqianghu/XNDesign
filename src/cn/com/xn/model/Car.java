@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class Car {
 	private int id;
-	private int number;
 	private CarKind carKind;
 	private String brand;
 	private int repertory;
@@ -17,12 +16,7 @@ public class Car {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getNumber() {
-		return number;
-	}
-	public void setNumber(int number) {
-		this.number = number;
-	}
+	 
 	public CarKind getCarKind() {
 		return carKind;
 	}
