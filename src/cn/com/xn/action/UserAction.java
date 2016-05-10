@@ -29,10 +29,10 @@ public class UserAction extends ActionSupport {
 	public String login(){
 		boolean bool=customerService.login(customer);
 		if(bool){
-			result="登录成功！！！";
+			result="loginSuccess";
 			return SUCCESS;
 		}else{
-			result="用户名或者密码错误！！！";
+			result="loginError";
 			return ERROR;
 		}
 	}

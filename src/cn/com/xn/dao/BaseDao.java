@@ -137,7 +137,6 @@ public class BaseDao<T> {
 		if(objs != null && objs.length > 0) {
 			for(int i = 0; i < objs.length; i ++) {
 				query.setParameter(i, objs[i]);
-				System.out.println(i+":"+objs[i]);
 			}
 		}
 	}
