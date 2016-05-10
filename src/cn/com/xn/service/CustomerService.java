@@ -3,6 +3,8 @@ package cn.com.xn.service;
 import java.util.Date;
 import java.util.List;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import cn.com.xn.dao.CustomerDao;
 import cn.com.xn.model.Customer;
 import cn.com.xn.util.PageBean;
@@ -21,6 +23,7 @@ public class CustomerService {
 	 */
 	public void  addCustomer(Customer customer){
 		customer.setTime(new Date());
+		ActionContext.getContext().getSession().put("customer", customer);
 		customerDao.addCustomer(customer);
 	}
 	/**
@@ -52,6 +55,8 @@ public class CustomerService {
 		Object[] objs=new Object[]{customer.getUserName(),customer.getPassword()};
 		List<Customer> list=customerDao.listCustomer(hql, objs);
 		if(list!=null&&list.size()>0){
+			Customer cus=list.get(0);
+			ActionContext.getContext().getSession().put("customer", cus);
 			return true;
 		}else{
 			return false;

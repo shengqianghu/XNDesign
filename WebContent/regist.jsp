@@ -12,6 +12,45 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='http://fonts.useso.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="<%=path%>/js/jquery.js"></script>
+<script type="text/javascript" src="<%=path%>/js/validate.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	$("#repassword").blur(function(){
+		checkRepassword();
+	});
+	
+	$("#tel").blur(function(){
+		checkTel();
+	});
+	
+	$("#submitForm").submit(function(){
+		return checkRepassword()&&checkTel();
+	});
+})
+
+function checkTel(){
+	var tel=$("#tel").val().trim();
+	if(!(tel.isTel()||tel.isMobile())){
+		alert("The tel is not right !!!");
+		return false;
+	}else{
+		return true;
+	}
+}
+
+function checkRepassword(){
+	var pass=$("#password").val().trim();
+	var repass=$("#repassword").val().trim();
+	if(!isEquals(pass,repass)){
+		alert("The password is not equals to repassword!!");
+		return false;
+	}else{
+		return true;
+	}
+}
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -45,7 +84,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </ul>
       </div>
       <div class="header_top_right">
-        <div class="login"> <span><a href="login.html"><img src="images/login.png" alt="" title="login"></a></span> </div>
+        <div class="login">
+         <span><a href="login.jsp">
+         <img src="images/login.png" alt="" title="login">
+         </a></span>
+          </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
           <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
@@ -72,19 +115,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </div>
   <div class="main">
     <div class="main1">
-      <form class="form-4" action="user_regist.action" method="post">
+      <form class="form-4" id="submitForm" action="user_regist.action" method="post">
         <h1>Register</h1>
         <p>
           <label for="login">Username or email</label>
-          <input type="text" name="customer.userName" placeholder="Username or email" required>
+          <input type="text" name="customer.userName"   placeholder="Username or email" required>
         </p>
         <p>
           <label for="password">Password</label>
-          <input type="password" name='customer.password' placeholder="Password" required>
+          <input type="password" name='customer.password' id="password" placeholder="Password" required>
         </p>
         <p>
           <label for="password">RePassword</label>
-          <input type="password" name='repassword' placeholder="Password" required>
+          <input type="password" name='repassword' id="repassword" placeholder="Password" required>
         </p>
         <p>
           <label for="login">Name</label>
@@ -92,12 +135,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </p>
         <p>
           <label for="login">sex</label>
-          <input type="radio" name="customer.sex" value="Man" />Man
+          <input type="radio" name="customer.sex" checked="checked" value="Man" />Man
           <input type="radio" name="customer.sex" value="Woman" />Woman
         </p>
         <p>
           <label for="login">Phone</label>
-          <input type="text" name="customer.phone" placeholder="PhoneNumber" required>
+          <input type="text" name="customer.phone" id="tel"  placeholder="PhoneNumber" required>
         </p>
         <p>
           <input type="submit"  value="Regist" onclick="">

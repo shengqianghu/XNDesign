@@ -13,7 +13,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <link href='http://fonts.useso.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="<%=path %>/js/jquery.js"></script>
+<script type="text/javascript">
 
+$(function(){
+	var result="<s:property value='result'/>";
+	if(result!=null&&result=="loginError"){
+		alert("用户名或者密码错误!!!");
+	}
+	
+})
+</script>
 </head>
 <body>
 <div class="wrap">
@@ -47,7 +56,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </ul>
       </div>
       <div class="header_top_right">
-        <div class="login"> <span><a href="login.html"><img src="images/login.png" alt="" title="login"></a></span> </div>
+         <div class="login">
+         <span><a href="login.jsp">
+         <img src="images/login.png" alt="" title="login">
+         </a></span>
+          </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
           <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
@@ -78,11 +91,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         <h1>Login or Register</h1>
         <p>
           <label for="login">Username or email</label>
-          <input type="text" name="customer.userName"  placeholder="Username or email" required>
+          <input type="text" name="customer.userName" value="<s:property value="customer.userName"/>"  placeholder="Username or email" required>
         </p>
         <p>
           <label for="password">Password</label>
-          <input type="password" name='customer.password' placeholder="Password" required>
+          <input type="password" name='customer.password' value="<s:property value="customer.password"/>" placeholder="Password" required>
         </p>
         <p>
           <input type="submit" name="submit" value="Login">

@@ -14,7 +14,7 @@ function showTime(){
     t -= 1;  
     document.getElementById('showTime').innerHTML= "<font color='white'>"+t+"</font>";
     if(t==0){  
-        location.href='login.html';  
+        location.href='login.jsp';  
     }  
     //每秒执行一次,showTime()  
     setTimeout("showTime()",1000);  
@@ -57,7 +57,11 @@ function showTime(){
         </ul>
       </div>
       <div class="header_top_right">
-        <div class="login"> <span><a href="login.html"><img src="images/login.png" alt="" title="login"></a></span> </div>
+        <div class="login">
+         <span><a href="login.jsp">
+         <img src="images/login.png" alt="" title="login">
+         </a></span>
+          </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
           <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
@@ -109,7 +113,6 @@ function showTime(){
         <li class="icon2"><a href="#" target="_blank"> </a></li>
         <li class="icon3"><a href="#" target="_blank"> </a></li>
         <li class="icon4"><a href="#" target="_blank"> </a></li>
-        <div class="clear"></div>
       </ul>
     </div>
     <div class="clear"></div>
