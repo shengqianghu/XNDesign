@@ -14,7 +14,7 @@ function showTime(){
     t -= 1;  
     document.getElementById('showTime').innerHTML= "<font color='white'>"+t+"</font>";
     if(t==0){  
-        location.href='index.html';  
+        location.href='index.jsp';  
     }  
     //每秒执行一次,showTime()  
     setTimeout("showTime()",1000);  
@@ -29,7 +29,7 @@ function showTime(){
 <div class="wrap">
   <div class="header">
     <div class="logo">
-      <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+      <h1><a href="index.jsp"><img src="images/logo.png" alt=""></a></h1>
     </div>
     <div class="h_right">
       <div class="drp-dwn">
@@ -64,7 +64,7 @@ function showTime(){
           </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
-          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
+          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(<font id="commodity_counts">${sessionScope.commodiety_counts== null ? "empty" : sessionScope.commodiety_counts}</font>)</span> </a> </div>
         </div>
         <div class="clear"></div>
       </div>
@@ -72,10 +72,10 @@ function showTime(){
     <div class="clear"></div>
     <div class="h_main">
       <ul class="nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="maintain.html">Maintains</a></li>
-        <li><a href="repair.html">Repairs</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="index.jsp">Home</a></li>
+        <li><a href="maintain.jsp">Maintains</a></li>
+        <li><a href="repair.jsp">Repairs</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
       </ul>
       <div class="search">
         <form>
@@ -90,7 +90,7 @@ function showTime(){
     <div class="main1">
       	<h1><font color="white">We have received your order and will be in contact with you within three working days after the review!The page will be closed in 3 seconds and forward to the index page,if not ,click the link</font></h1>
       	<div id="showTime"></div> 
-      	 <a href="login.html">go</a> 
+      	 <a href="login.jsp">go</a> 
 ​​       </div>
   </div>
   <div class="footer">

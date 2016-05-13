@@ -5,8 +5,8 @@
 		<id name="id" column="t_record_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<many-to-one name="customer" class="Customer" column="customer_number"  ></many-to-one>
-		<many-to-one name="Car" class="Car" column="car_number"  ></many-to-one>
+		<many-to-one name="customer" class="Customer"  lazy="false" column="customer_number"  ></many-to-one>
+		<many-to-one name="car" class="Car" column="car_number"  lazy="false" ></many-to-one>
 		<property name="recordTime" column="record_time" type="timestamp"></property>
 		<property name="phenomenon" column="phenomenon" type="string" length="500"></property>
 		<property name="accept" column="accept" type="string" length="10"></property>

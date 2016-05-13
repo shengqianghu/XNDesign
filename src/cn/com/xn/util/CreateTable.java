@@ -9,6 +9,5 @@ public class CreateTable {
 		Configuration cfg = new AnnotationConfiguration().configure();
 		SchemaExport export = new SchemaExport(cfg);
 		export.create(true, true);
-		
 	}
 }

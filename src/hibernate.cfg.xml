@@ -24,6 +24,7 @@
         <mapping resource="cn/com/xn/mapper/Photo.hbm.xml" />
         <mapping resource="cn/com/xn/mapper/Business.hbm.xml" />
         <mapping resource="cn/com/xn/mapper/Record.hbm.xml" />
+        <mapping resource="cn/com/xn/mapper/ShoppingCar.hbm.xml" />
     </session-factory>
 
 </hibernate-configuration>

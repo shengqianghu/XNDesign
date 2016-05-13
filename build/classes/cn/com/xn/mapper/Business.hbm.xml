@@ -5,7 +5,7 @@
 		<id name="id" column="t_business_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<many-to-one name="customer" class="Customer" column="customer_number"  ></many-to-one>
+		<many-to-one name="customer"  lazy="false" class="Customer" column="customer_number"  ></many-to-one>
 		<many-to-one name="Car" class="Car" column="car_number"  ></many-to-one>
 		<many-to-one name="carColor" class="CarColor" column="car_color_number"  ></many-to-one>
 		<many-to-one name="carSize" class="CarSize" column="car_size_number"  ></many-to-one>

@@ -12,8 +12,8 @@ public class CarService {
 		carDao=new CarDao();
 	}
 	/**
-	 * 添加
-	 * 时间：2016-5-9
+	 * 娣诲姞
+	 * 鏃堕棿锛�2016-5-9
 	 * @param $
 	 * @return  void
 	 * 
@@ -22,8 +22,8 @@ public class CarService {
 		carDao.addCar(car);
 	}
 	/**
-	 * 删除
-	 * 时间：2016-5-9
+	 * 鍒犻櫎
+	 * 鏃堕棿锛�2016-5-9
 	 * @param $
 	 * @return  void
 	 * 
@@ -34,9 +34,12 @@ public class CarService {
 		}
 	}
 	
+	public Car getCarDetails(Car car){
+		return carDao.getCarDetails(car);
+	}
 	/**
-	 * 修改
-	 * 时间：2016-5-9
+	 * 淇敼
+	 * 鏃堕棿锛�2016-5-9
 	 * @param $
 	 * @return  void
 	 * 
@@ -45,16 +48,16 @@ public class CarService {
 		carDao.updateCar(car);
 	}
 	/**
-	 * 以List的方式查询
-	 * 时间：2016-5-9
+	 * 浠ist鐨勬柟寮忔煡璇�
+	 * 鏃堕棿锛�2016-5-9
 	 * @param $
 	 * @return  List<Car>
 	 * 
 	 */
 	public List<Car> listCar(Car car){
-		String hql="from Car b where 1=1";
+		String hql="from Car b where 1=1 ";
 		Object[] objs=null;
-		//如果有条件则带上条件，为空的话查询全部
+		//濡傛灉鏈夋潯浠跺垯甯︿笂鏉′欢锛屼负绌虹殑璇濇煡璇㈠叏閮�
 		if(car!=null){
 			/* objs=new Object[]{car.getCar().getId()};
 			 hql+=" and b.car.id=?";*/
@@ -63,8 +66,8 @@ public class CarService {
 	}
 	
 	/**
-	 * 通过分页的形式查询
-	 * 时间：2016-5-9
+	 * 閫氳繃鍒嗛〉鐨勫舰寮忔煡璇�
+	 * 鏃堕棿锛�2016-5-9
 	 * @param $
 	 * @return  PageBean
 	 * 
@@ -72,14 +75,14 @@ public class CarService {
 	public PageBean pageBean(PageBean pageBean,Car car){
 		String hql="from Car b where 1=1";
 		Object[] objs=null;
-		//为空时查询全部信息
+		//涓虹┖鏃舵煡璇㈠叏閮ㄤ俊鎭�
 	/*	if(car!=null){
 			objs=new Object[]{car.getCar().getId()};
 			hql=" and b.car.id=?";
 		}*/
 		if(pageBean==null){
 			pageBean=new PageBean();
-			//默认的一页显示10条记录
+			//榛樿鐨勪竴椤垫樉绀�10鏉¤褰�
 			pageBean.setPageSize(6);
 		}
 		return carDao.pageBean(pageBean, hql, objs);

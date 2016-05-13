@@ -18,7 +18,6 @@ public class UserAction extends ActionSupport {
 	@Override
 	public String execute() throws Exception {
 		// TODO Auto-generated method stub
-		System.out.println("fuck you!");
 		return super.execute();
 	}
 	public String regist(){
@@ -37,7 +36,6 @@ public class UserAction extends ActionSupport {
 		}
 	}
 
-	
 	public Customer getCustomer() {
 		return customer;
 	}

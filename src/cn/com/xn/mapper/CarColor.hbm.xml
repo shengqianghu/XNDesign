@@ -5,7 +5,7 @@
 		<id name="id" column="t_car_color_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<many-to-one name="car" class="Car" column="car_number"  ></many-to-one>
-		<many-to-one name="color" class="Color" column="color_number"  ></many-to-one>
+		<many-to-one name="car" class="Car"  column="car_number" lazy="false"  ></many-to-one>
+		<many-to-one name="color" class="Color"    column="color_number"  lazy="false" ></many-to-one>
 	</class>
 </hibernate-mapping>

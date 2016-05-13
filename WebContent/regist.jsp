@@ -56,7 +56,7 @@ function checkRepassword(){
 <div class="wrap">
   <div class="header">
     <div class="logo">
-      <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+      <h1><a href="index.jsp"><img src="images/logo.png" alt=""></a></h1>
     </div>
     <div class="h_right">
       <div class="drp-dwn">
@@ -91,7 +91,7 @@ function checkRepassword(){
           </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
-          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
+          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(<font id="commodity_counts">${sessionScope.commodiety_counts== null ? "empty" : sessionScope.commodiety_counts}</font>)</span> </a> </div>
         </div>
         <div class="clear"></div>
       </div>
@@ -99,10 +99,10 @@ function checkRepassword(){
     <div class="clear"></div>
     <div class="h_main">
       <ul class="nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="maintain.html">Maintains</a></li>
-        <li><a href="repair.html">Repairs</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="index.jsp">Home</a></li>
+        <li><a href="maintain.jsp">Maintains</a></li>
+        <li><a href="repair.jsp">Repairs</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
       </ul>
       <div class="search">
         <form>

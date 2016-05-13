@@ -5,7 +5,7 @@
 		<id name="id" column="t_car_size_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<many-to-one name="car" class="Car" column="car_number"  ></many-to-one>
-		<many-to-one name="size" class="Size" column="size_number"  ></many-to-one>
+		<many-to-one name="car" class="Car"  lazy="false" column="car_number"  ></many-to-one>
+		<many-to-one name="size" class="Size"  lazy="false" column="size_number"  ></many-to-one>
 	</class>
 </hibernate-mapping>

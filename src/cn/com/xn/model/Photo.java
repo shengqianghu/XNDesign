@@ -1,11 +1,10 @@
 package cn.com.xn.model;
 
-import java.awt.Image;
 
 public class Photo {
 	private int id;
 	private Car car;
-	private Image photo;
+	private String photo;
 	public int getId() {
 		return id;
 	}
@@ -18,13 +17,10 @@ public class Photo {
 	public void setCar(Car car) {
 		this.car = car;
 	}
-	public Image getPhoto() {
+	public String getPhoto() {
 		return photo;
 	}
-	public void setPhoto(Image photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
-	
-	
-
 }

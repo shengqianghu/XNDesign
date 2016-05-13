@@ -15,7 +15,7 @@ public class BaseDao<T> {
 		Session session=null;
 		Transaction tr=null;
 		try {
-			 session = HibernateSessionFactory.getSession();
+			session = HibernateSessionFactory.getSession();
 			tr=session.beginTransaction();
 			session.save(obj);
 			tr.commit();			
@@ -51,7 +51,7 @@ public class BaseDao<T> {
 	}
 	
 	/**
-	 * 查询 无条件
+	 * 鏌ヨ 鏃犳潯浠�
 	 * @param hql
 	 * @return
 	 */
@@ -60,7 +60,7 @@ public class BaseDao<T> {
 	}
 	
 	/**
-	 * 查询 唯一条件
+	 * 鏌ヨ 鍞竴鏉′欢
 	 * @param hql
 	 * @param obj
 	 * @return
@@ -70,30 +70,27 @@ public class BaseDao<T> {
 	}
 	
 	/**
-	 * 查询 多条件
+	 * 鏌ヨ 澶氭潯浠�
 	 * @param hql
 	 * @param objs
 	 * @return
 	 */
 	public List<T> list(String hql, Object[] objs) {
 		Session session = HibernateSessionFactory.getSession();
-		
 		Query query = session.createQuery(hql);		
-		
 		this.setParameter(query, objs);
 		
 		List<T> list = query.list();
-		
 		HibernateSessionFactory.closeSession();
 		
 		return list;
 	}
 	
 	/**
-	 * 分页查询 多条件
+	 * 鍒嗛〉鏌ヨ 澶氭潯浠�
 	 * @param hql
 	 * @param objs
-	 * @param pageBean 用到了当前页  和总页数 
+	 * @param pageBean 鐢ㄥ埌浜嗗綋鍓嶉〉  鍜屾�婚〉鏁� 
 	 * @return
 	 */
 	public PageBean page(String hql, Object[] objs, PageBean pageBean) {

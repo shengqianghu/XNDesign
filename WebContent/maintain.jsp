@@ -11,7 +11,7 @@
 <div class="wrap">
   <div class="header">
     <div class="logo">
-      <h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+      <h1><a href="index.jsp"><img src="images/logo.png" alt=""></a></h1>
     </div>
     <div class="h_right">
       <div class="drp-dwn">
@@ -46,7 +46,7 @@
           </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
-          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(empty)</span> </a> </div>
+          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(<font id="commodity_counts">${sessionScope.commodiety_counts== null ? "empty" : sessionScope.commodiety_counts}</font>)</span> </a> </div>
         </div>
         <div class="clear"></div>
       </div>
@@ -54,10 +54,10 @@
     <div class="clear"></div>
     <div class="h_main">
       <ul class="nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="maintain.html">Maintains</a></li>
-        <li><a href="repair.html">Repairs</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li class="active"><a href="index.jsp">Home</a></li>
+        <li><a href="maintain.jsp">Maintains</a></li>
+        <li><a href="repair.jsp">Repairs</a></li>
+        <li><a href="contact.jsp">Contact</a></li>
       </ul>
       <div class="search">
         <form>
@@ -72,32 +72,32 @@
     <div class="main1">
       <h2 class="hdr_s">Why us importance of maintaince</h2>
       <div class="image group">
-        <div class="images_2_of_2"> <a href="details.html"> <img src="images/8.jpg" alt=""></a> </div>
+        <div class="images_2_of_2"> <a href="details.jsp"> <img src="images/8.jpg" alt=""></a> </div>
         <div class="span_2_of_2">
           <h3>Lorem Ipsum is simply dummy text </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
+          <div class="rd_more"> <a href="details.jsp" class="button button-rounded">Read More</a> </div>
         </div>
         <div class="clear"></div>
       </div>
       <div class="image group">
-        <div class="images_2_of_2"> <a href="details.html"> <img src="images/2.jpg" alt=""></a> </div>
+        <div class="images_2_of_2"> <a href="details.jsp"> <img src="images/2.jpg" alt=""></a> </div>
         <div class="span_2_of_2">
           <h3>Lorem Ipsum is simply dummy text </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
+          <div class="rd_more"> <a href="details.jsp" class="button button-rounded">Read More</a> </div>
         </div>
         <div class="clear"></div>
       </div>
       <div class="image group1">
-        <div class="images_2_of_2"> <a href="details.html"> <img src="images/3.jpg" alt=""></a> </div>
+        <div class="images_2_of_2"> <a href="details.jsp"> <img src="images/3.jpg" alt=""></a> </div>
         <div class="span_2_of_2">
           <h3>Lorem Ipsum is simply dummy text </h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <div class="rd_more"> <a href="details.html" class="button button-rounded">Read More</a> </div>
+          <div class="rd_more"> <a href="details.jsp" class="button button-rounded">Read More</a> </div>
         </div>
         <div class="clear"></div>
       </div>

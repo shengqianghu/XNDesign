@@ -5,7 +5,7 @@
 		<id name="id" column="t_car_photo_id" type="integer" >
 			<generator class="native"></generator>
 		</id>
-		<many-to-one name="car" class="Car"  column="car_number"></many-to-one>
-		<property name="photo" column="photo" type="blob" />
+		<many-to-one name="car" class="Car"  lazy="false"  column="car_number"></many-to-one>
+		<property name="photo" column="photo" type="string" length="50"/>
 	</class>
 </hibernate-mapping>

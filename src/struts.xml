@@ -4,18 +4,26 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<package name="default" extends="struts-default" namespace="/">
+	<package name="default" extends="json-default,struts-default" namespace="/">
 
 		<action name="user_*" class="cn.com.xn.action.UserAction" method="{1}">
 			<result name="regist" >/regist_success.jsp</result>
-			<result name="success" >/index.jsp</result>
+			<result name="success" >/to_index.jsp</result>
 			<result name="error" >/login.jsp</result>
 			<result name="false">/404.jsp</result>
 		</action>
 		<action name="car_*" class="cn.com.xn.action.CarAction" method="{1}">
-			<result name="success" >/mycar.jsp</result>
-			<result name="false">/404.jsp</result>
-			<result name="repairOrder_success">/repairOrder_success.jsp</result>
+			<result name="errot">/404.jsp</result>
+			<result name="success" >/index.jsp</result>
+			<result name="detail">/details.jsp</result>
+		</action>
+		
+		<action name="shoppingcar_*" class="cn.com.xn.action.ShoppingCarAction" method="{1}">
+			<result name="addToCar" type="json">
+			<param name="root">result</param>
+			<param name="ignorehierarchy">false</param>
+			</result>
+			<result name="selectAll">/mycar.jsp</result>
 		</action>
 	</package>
 </struts>
