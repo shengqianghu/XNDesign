@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="cn.com.xn.model">
+	<class name="Photo" table="photo">
+		<id name="id" column="t_car_photo_id" type="integer" >
+			<generator class="native"></generator>
+		</id>
+		<many-to-one name="car" class="Car"  lazy="false"  column="car_number"></many-to-one>
+		<property name="photo" column="photo" type="string" length="50"/>
+	</class>
+</hibernate-mapping>
