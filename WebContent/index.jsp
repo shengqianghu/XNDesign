@@ -98,14 +98,14 @@
 		<div class="container">
 			<section id="dg-container" class="dg-container">
 				<div class="dg-wrapper">
-					<a href="#"><img src="images/1.jpg" alt="image1" /></a> <a
-						href="#"><img src="images/2.jpg" alt="image2" /></a> <a href="#"><img
-						src="images/3.jpg" alt="image3" /></a> <a href="#"><img
-						src="images/4.jpg" alt="image4" /></a> <a href="#"><img
-						src="images/5.jpg" alt="image5" /></a> <a href="#"><img
-						src="images/6.jpg" alt="image1" /></a> <a href="#"><img
-						src="images/7.jpg" alt="image2" /></a> <a href="#"><img
-						src="images/8.jpg" alt="image3" /></a>
+					<a href="#"><img width="480" height="360" src="images/1.jpg" alt="image1" /></a> <a
+						href="#"><img width="480" height="360" src="images/2.jpg" alt="image2" /></a> <a href="#"><img
+						width="480" height="360" src="images/3.jpg" alt="image3" /></a> <a href="#"><img
+						width="480" height="360" src="images/4.jpg" alt="image4" /></a> <a href="#"><img
+						width="480" height="360" src="images/5.jpg" alt="image5" /></a> <a href="#"><img
+						width="480" height="360" src="images/6.jpg" alt="image1" /></a> <a href="#"><img
+						width="480" height="360" src="images/7.jpg" alt="image2" /></a> <a href="#"><img
+						width="480" height="360" src="images/8.jpg" alt="image3" /></a>
 				</div>
 			</section>
 		</div>
@@ -126,7 +126,7 @@
 				<form action="car_details.action" id="detail_form<s:property value="#sts.index"></s:property>">
 					<s:hidden name="car.id" value="%{id}"></s:hidden>
 					<a href="javascript:void(0)" onclick="document.getElementById('detail_form<s:property value="#sts.index"></s:property>').submit()"><img
-						src="images/${poster}"></a> <a href="javascript:void(0)">
+						width="260" height="240" src="images/${poster}"></a> <a href="javascript:void(0)">
 						<h3>
 							<s:property value="brand"></s:property>
 						</h3>

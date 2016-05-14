@@ -11,6 +11,7 @@
 		<property name="money" column="money" type="float" ></property>
 		<property name="ttm" column="ttm" type="timestamp"></property>
 		<property name="details" column="details" type="string" length="800" ></property>
+		<property name="param" column="param" type="string" length="800" ></property>
 		<property name="poster" column="poster" type="string" length="20" ></property>
 	</class>
 </hibernate-mapping>

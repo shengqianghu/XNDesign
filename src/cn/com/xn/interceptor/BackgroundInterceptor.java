@@ -1,4 +1,4 @@
-package cn.com.pso.interceptor;
+package cn.com.xn.interceptor;
 
 import cn.com.xn.model.Customer;
 
@@ -22,7 +22,7 @@ public class BackgroundInterceptor implements Interceptor {
 	public String intercept(ActionInvocation arg0) throws Exception {
 		System.out.println("访问的类:" + arg0.getAction().getClass().getName());
 		System.out.println("访问的url路径:" + arg0.getProxy().getActionName());
-		System.out.println("访问的方法:" + arg0.getProxy().getMethod());
+		System.out.println("访问的方�?:" + arg0.getProxy().getMethod());
 		String className=arg0.getAction().getClass().getName();
 		String method=arg0.getProxy().getMethod();
 		String result=this.backOrFore(className, method, arg0);

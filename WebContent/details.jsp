@@ -140,14 +140,14 @@
 								<div id="products_example">
 									<div id="products">
 										<div class="slides_container">
-											<s:iterator value="car.photos">
+											 <s:iterator value="car.photos"> 
 											<a href="#" target="_blank">
-											<img src="images/<s:property value="photo"></s:property>_slide.jpg" alt=" " /></a> 
-											</s:iterator>
+											<img width="280" height="180" src="images/<s:property value="photo"></s:property>" alt=" " /></a> 
+											 </s:iterator> 
 										</div>
 										<ul class="pagination">
 										<s:iterator value="car.photos" >
-											<li><a href="#"><img src="images/<s:property value="photo"></s:property>.jpg" alt=""></a></li>			
+											<li><a href="#"><img width="260" height="50" src="images/<s:property value="photo"></s:property>" alt=""></a></li>			
 										</s:iterator>
 										</ul>
 									</div>
@@ -226,40 +226,7 @@
 								<div
 									class="product-desc resp-tab-content resp-tab-content-active"
 									style="display: block" aria-labelledby="tab_item-0">
-									<p>
-										Lorem Ipsum is simply dummy text of the <span>printing
-											and typesetting industry</span>It has survived not only five
-										centuries, but also the leap into electronic typesetting,
-										remaining essentially unchanged.
-									</p>
-									<p>
-										Lorem Ipsum is simply dummy text of the printing and
-										typesetting industry. Lorem Ipsum has been the industry's
-										standard dummy text ever since the 1500s, <span>when an
-											unknown printer took a galley of type and scrambled</span> it to
-										make a type specimen book. It has survived not only five
-										centuries, but also the leap into electronic typesetting,
-										remaining essentially unchanged.Lorem Ipsum is simply dummy
-										text of the printing and typesetting industry. Lorem Ipsum has
-										been the industry's standard dummy text ever since the 1500s,
-										when an unknown printer took a galley of type and scrambled it
-										to make a type specimen book. It has survived not only five
-										centuries, but also the leap into electronic typesetting,
-										remaining essentially unchanged.Lorem Ipsum is simply dummy
-										text of the printing and typesetting industry. Lorem Ipsum has
-										been the industry's standard dummy text ever since the 1500s,
-										when an unknown printer took a galley of type and scrambled it
-										to make a type specimen book.<span> It has survived not
-											only five centuries</span>, but also the leap into electronic
-										typesetting, remaining essentially unchanged.
-									</p>
-									<p>Lorem Ipsum is simply dummy text of the printing and
-										typesetting industry. Lorem Ipsum has been the industry's
-										standard dummy text ever since the 1500s, when an unknown
-										printer took a galley of type and scrambled it to make a type
-										specimen book. It has survived not only five centuries, but
-										also the leap into electronic typesetting, remaining
-										essentially unchanged.</p>
+									<p><s:property value="car.param"></s:property></p>
 								</div>
 								<h2 class="resp-accordion" role="tab" aria-controls="tab_item-1">
 									<span class="resp-arrow"></span>product Tags

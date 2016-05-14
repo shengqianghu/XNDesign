@@ -86,7 +86,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </p>
         <p>
           <label for="telephone:">Telephone</label>
-          <input type="tel" name='record。phone' placeholder="telephone number" required >
+          <input type="tel" name='record.phone' placeholder="telephone number" required >
         </p>
         <p>
           <label >Travel distance </label>

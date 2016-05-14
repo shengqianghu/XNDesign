@@ -29,7 +29,6 @@ public class BaseDao<T> {
 		}finally{
 			HibernateSessionFactory.closeSession();
 		}
-	
 	}
 	
 	public void update(Object obj) {

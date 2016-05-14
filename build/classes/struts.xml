@@ -8,7 +8,7 @@
 
 <!-- 设置拦截器-->
  	<interceptors>
-			<interceptor name="interceptor" class="cn.com.pso.interceptor.BackgroundInterceptor">
+			<interceptor name="interceptor" class="cn.com.xn.interceptor.BackgroundInterceptor">
 			
 			</interceptor>
 			

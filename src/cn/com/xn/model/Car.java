@@ -15,6 +15,7 @@ public class Car {
 	private List<Photo> photos;
 	private List<Color> colors;
 	private List<Size> sizes;
+	private String param;
 	public int getId() {
 		return id;
 	}
@@ -81,6 +82,12 @@ public class Car {
 	}
 	public void setPoster(String poster) {
 		this.poster = poster;
+	}
+	public String getParam() {
+		return param;
+	}
+	public void setParam(String param) {
+		this.param = param;
 	}
 	
 	
