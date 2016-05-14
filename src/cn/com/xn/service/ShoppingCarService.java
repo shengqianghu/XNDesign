@@ -34,6 +34,7 @@ public class ShoppingCarService {
 	public void deleteShoppingCar(ShoppingCar shoppingCar){
 		if(shoppingCar!=null&&shoppingCar.getId()!=0){
 			shoppingCarDao.deleteShoppingCar(shoppingCar.getId());
+			queryCount(shoppingCar.getCustomer());
 		}
 	}
 	

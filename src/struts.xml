@@ -6,6 +6,30 @@
 <struts>
 	<package name="default" extends="json-default,struts-default" namespace="/">
 
+<!-- 设置拦截器-->
+ 	<interceptors>
+			<interceptor name="interceptor" class="cn.com.pso.interceptor.BackgroundInterceptor">
+			
+			</interceptor>
+			
+			<interceptor-stack name="mystack">
+		 	
+		<!-- 	这里一定要 配置默认的interceptor，否则就会在action里面得不到从jsp页面传过来的值，
+			就会爆空指针异常。
+			 -->
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="interceptor"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		
+		<default-interceptor-ref name="mystack"></default-interceptor-ref>
+		
+		<global-results>
+			<result name="foregroundLogin" type="redirect">/login.jsp</result>
+		</global-results>
+	
+	 
+	 
 		<action name="user_*" class="cn.com.xn.action.UserAction" method="{1}">
 			<result name="regist" >/regist_success.jsp</result>
 			<result name="success" >/to_index.jsp</result>
@@ -25,6 +49,7 @@
 			</result>
 			<result name="selectAll">/mycar.jsp</result>
 			<result name="addToBusiness">/checkout_success.jsp</result>
+			<result name="deleteShoppingCar" type="chain">shoppingcar_selectAll</result>
 		</action>
 		<action name="record_*" class="cn.com.xn.action.RecordAction" method="{1}">
 			<result name="success">/repairOrder_success.jsp</result>

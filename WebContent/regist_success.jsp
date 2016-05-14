@@ -35,7 +35,7 @@ function showTime(){
 <div class="wrap">
   <div class="header">
     <div class="logo">
-      <h1><a href="index.jsp"><img src="images/logo.png" alt=""></a></h1>
+      <h1><a href="to_to_index.jsp"><img src="images/logo.png" alt=""></a></h1>
     </div>
     <div class="h_right">
       <div class="drp-dwn">
@@ -65,7 +65,7 @@ function showTime(){
       <div class="header_top_right">
         <div class="login">
          <span><a href="login.jsp">
-         <img src="images/login.png" alt="" title="login">
+         <img src="images/login.png" alt="" title="${sessionScope.customer== null ? 'Login' : sessionScope.customer.userName}">
          </a></span>
           </div>
         <div class="shopping_cart">
@@ -78,7 +78,7 @@ function showTime(){
     <div class="clear"></div>
     <div class="h_main">
       <ul class="nav">
-        <li class="active"><a href="index.jsp">Home</a></li>
+        <li class="active"><a href="to_index.jsp">Home</a></li>
         <li><a href="maintain.jsp">Maintains</a></li>
         <li><a href="repair.jsp">Repairs</a></li>
         <li><a href="contact.jsp">Contact</a></li>

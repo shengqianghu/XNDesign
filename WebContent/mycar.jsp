@@ -22,7 +22,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <div class="wrap">
   <div class="header">
     <div class="logo">
-      <h1><a href="index.jsp"><img src="images/logo.png" alt=""></a></h1>
+      <h1><a href="to_to_index.jsp"><img src="images/logo.png" alt=""></a></h1>
     </div>
     <div class="h_right">
       <div class="drp-dwn">
@@ -52,7 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
       <div class="header_top_right">
          <div class="login">
          <span><a href="login.jsp">
-         <img src="images/login.png" alt="" title="login">
+         <img src="images/login.png" alt="" title="${sessionScope.customer== null ? 'Login' : sessionScope.customer.userName}">
          </a></span>
           </div>
         <div class="shopping_cart">
@@ -65,7 +65,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <div class="clear"></div>
     <div class="h_main">
       <ul class="nav">
-        <li class="active"><a href="index.jsp">Home</a></li>
+        <li class="active"><a href="to_index.jsp">Home</a></li>
         <li><a href="maintain.jsp">Maintains</a></li>
         <li><a href="repair.jsp">Repairs</a></li>
         <li><a href="contact.jsp">Contact</a></li>
@@ -110,7 +110,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<input id="add1" name="" onclick="add(this)" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
 			</td>
 			<td class="tb1_td6"><label id="total1" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"><s:property value="#shoppingCar.car.money"/>$</label></td>
-			<td class="tb1_td7"><a href="#">Delete</a></td>
+			<td class="tb1_td7"><a href="shoppingcar_deleteShoppingCar.action?shoppingCar.customer.id=<s:property value="#session.customer.id"/>&shoppingCar.id=<s:property value="#shoppingCar.id"/>">Delete</a></td>
 		</tr>
 	</table> 
 	

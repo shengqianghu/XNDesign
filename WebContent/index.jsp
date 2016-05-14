@@ -32,7 +32,7 @@
 		<div class="header">
 			<div class="logo">
 				<h1>
-					<a href="index.jsp"><img src="images/logo.png" alt=""></a>
+					<a href="to_to_index.jsp"><img src="images/logo.png" alt=""></a>
 				</h1>
 			</div>
 			<div class="h_right">
@@ -62,7 +62,7 @@
 					<!-- ç»éå®ä¹åè¿éåºè¯¥åçåå -->
 					<div class="login">
 						<span><a href="login.jsp"> <img src="images/login.png"
-								alt="" title="login">
+								alt="" title="${sessionScope.customer== null ? 'Login' : sessionScope.customer.userName}">
 						</a></span>
 					</div>
 					<div class="shopping_cart">
@@ -82,7 +82,7 @@
 			<div class="clear"></div>
 			<div class="h_main">
 				<ul class="nav">
-					<li class="active"><a href="index.jsp">Home</a></li>
+					<li class="active"><a href="to_index.jsp">Home</a></li>
 					<li><a href="maintain.jsp">Maintains</a></li>
 					<li><a href="repair.jsp">Repairs</a></li>
 					<li><a href="contact.jsp">Contact</a></li>

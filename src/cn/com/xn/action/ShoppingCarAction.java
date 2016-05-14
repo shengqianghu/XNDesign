@@ -58,6 +58,11 @@ public class ShoppingCarAction extends ActionSupport {
 		return "addToBusiness";
 	}
 	
+	public String deleteShoppingCar(){
+		shopCarService.deleteShoppingCar(shoppingCar);
+		return "deleteShoppingCar";
+	}
+	
 	public String selectAll(){
 		shoppingCarList=shopCarService.listShoppingCar(shoppingCar);
 		return "selectAll";

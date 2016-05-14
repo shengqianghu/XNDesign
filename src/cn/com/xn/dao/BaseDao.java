@@ -6,6 +6,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import cn.com.xn.model.ShoppingCar;
 import cn.com.xn.util.HibernateSessionFactory;
 import cn.com.xn.util.PageBean;
 
@@ -46,7 +47,10 @@ public class BaseDao<T> {
 	
 	public void delete(Class<?> clz, Integer id) {
 		Session session = HibernateSessionFactory.getSession();
-		session.delete(this.load(clz, id));
+		Transaction tx1 = session.beginTransaction();  
+		// 先加载一个持久化对象  
+		session.delete(session.get(clz, id)); // 计划执行一个delete语句  
+		tx1.commit(); // 清理缓存，执行delete语句  
 		HibernateSessionFactory.closeSession();
 	}
 	
@@ -137,4 +141,13 @@ public class BaseDao<T> {
 			}
 		}
 	}
+	public static void main(String[] args) {
+		Session session = HibernateSessionFactory.getSession();
+		ShoppingCar sc=new ShoppingCar();
+		sc.setId(2);
+		session.delete(sc);
+		System.out.println("deleted");
+		HibernateSessionFactory.closeSession();
+	}
+	
 }
