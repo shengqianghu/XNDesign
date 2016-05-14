@@ -26,6 +26,9 @@
 			<result name="selectAll">/mycar.jsp</result>
 			<result name="addToBusiness">/checkout_success.jsp</result>
 		</action>
+		<action name="record_*" class="cn.com.xn.action.RecordAction" method="{1}">
+			<result name="success">/repairOrder_success.jsp</result>
+		</action>
 	</package>
 </struts>
 

@@ -76,31 +76,31 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
   </div>
   <div class="main">
-  	<h2><font style="color: #888888;font-size: 3em">Please fill the repair table out</font></h2>
+    <h2><font style="color: #888888;font-size: 3em">Please fill the repair table out</font></h2>
     <div class="main1">
-      <form class="form-4" action="car_repairOrder.action" method="post" >
+      <form class="form-4" action="record_submitRepair.action" method="post" >
         
         <p>
           <label for="login">Username or email</label>
-          <input type="text" name="userName" placeholder="UserName" required>
+          <input type="text" name="record.customer.name" placeholder="UserName" required>
         </p>
         <p>
           <label for="telephone:">Telephone</label>
-          <input type="tel" name='telephone' placeholder="telephone number" required >
+          <input type="tel" name='record。phone' placeholder="telephone number" required >
         </p>
         <p>
           <label >Travel distance </label>
-          <input type="number" name='travelDistance ' placeholder="Travel distance " required min="0" maxlength="8">
+          <input type="number" name='record.distance' placeholder="Travel distance " required min="0" maxlength="8">
         </p>
        <p>
           <label >phenomena</label>
-          <textarea name="phenomena" required></textarea>
+          <textarea name="record.phenomenon" required></textarea>
         </p>
         <p>
           <input type="submit" name="submit" value="Submit">
         </p>
-      </form>
-​​       </div>
+    </form>
+    </div>
   </div>
   <div class="footer">
     <div class="f_left">
