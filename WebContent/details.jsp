@@ -107,7 +107,7 @@
 						<div class="cart">
 							<a href="shoppingcar_selectAll.action?shoppingCar.customer.id=<s:property value="#session.customer.id"/>" title="View my shopping cart"
 								rel="nofollow"> <span class="cart_title">Cart</span> <span
-								class="no_product">(<font id="commodity_counts">${sessionScope.shoppingCar== null ? "empty" : sessionScope.shoppingCar}</font>)</span>
+								class="no_product">(<font id="commodity_counts"><s:property value="#session.commodiety_counts"/></font>)</span>
 							</a>
 						</div>
 					</div>

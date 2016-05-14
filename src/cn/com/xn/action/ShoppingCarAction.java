@@ -3,9 +3,11 @@ package cn.com.xn.action;
 
 import java.util.List;
 
+import cn.com.xn.model.Business;
 import cn.com.xn.model.Car;
 import cn.com.xn.model.Customer;
 import cn.com.xn.model.ShoppingCar;
+import cn.com.xn.service.BusinessService;
 import cn.com.xn.service.ShoppingCarService;
 
 import com.opensymphony.xwork2.ActionContext;
@@ -26,6 +28,11 @@ public class ShoppingCarAction extends ActionSupport {
 	
 	private List<ShoppingCar> shoppingCarList;
 	
+	private String ids;
+	private String quantities;
+	private Business business;
+	private BusinessService businessService=new BusinessService();
+	
 	private ShoppingCarService shopCarService=new ShoppingCarService();
 	/**
 	 * @return
@@ -44,6 +51,11 @@ public class ShoppingCarAction extends ActionSupport {
 			result = list.size()+"";
 		}
 		return "addToCar";
+	}
+	
+	public String addToBusiness(){
+		businessService.addBusiness(ids,quantities);
+		return "addToBusiness";
 	}
 	
 	public String selectAll(){
@@ -92,6 +104,32 @@ public class ShoppingCarAction extends ActionSupport {
 	public void setShoppingCarList(List<ShoppingCar> shoppingCarList) {
 		this.shoppingCarList = shoppingCarList;
 	}
+
+	public String getIds() {
+		return ids;
+	}
+
+	public void setIds(String ids) {
+		this.ids = ids;
+	}
+
+	public String getQuantities() {
+		return quantities;
+	}
+
+	public void setQuantities(String quantities) {
+		this.quantities = quantities;
+	}
+
+	public Business getBusiness() {
+		return business;
+	}
+
+	public void setBusiness(Business business) {
+		this.business = business;
+	}
+	
+	
 	
 	
 	

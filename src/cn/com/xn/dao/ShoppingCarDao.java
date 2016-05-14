@@ -19,6 +19,10 @@ public class ShoppingCarDao {
 		baseDao.delete(ShoppingCar.class, id);
 	}
 	
+	public ShoppingCar querySingle(int id){
+		return (ShoppingCar)baseDao.load(ShoppingCar.class, id);
+	}
+	
 	public void updateShoppingCar(ShoppingCar shoppingCar){
 		baseDao.update(shoppingCar);
 	}

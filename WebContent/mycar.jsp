@@ -16,16 +16,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script type="text/javascript" src="js/jquery.1.4.2-min.js"></script>
 <script type="text/javascript" src="js/Calculation.js"></script>
 <script type="text/javascript" src="js/car.js"></script>
-<script type="text/javascript" >
-
-$(function(){
-	$("#jz2").click(function(){
-		
-	});
-})
-
-</script>
-
 
 </head>
 <body>
@@ -67,7 +57,7 @@ $(function(){
           </div>
         <div class="shopping_cart">
           <div class="cart_img"> <img src="images/header_cart.png"> </div>
-          <div class="cart"> <a href="car_carDetail.action" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(<font id="commodity_counts">${sessionScope.commodiety_counts== null ? "empty" : sessionScope.commodiety_counts}</font>)</span> </a> </div>
+          <div class="cart"> <a href="shoppingcar_selectAll.action?shoppingCar.customer.id=<s:property value="#session.customer.id"/>" title="View my shopping cart" rel="nofollow"> <span class="cart_title">Cart</span> <span class="no_product">(<font id="commodity_counts">${sessionScope.commodiety_counts== null ? "empty" : sessionScope.commodiety_counts}</font>)</span> </a> </div>
         </div>
         <div class="clear"></div>
       </div>
@@ -109,14 +99,15 @@ $(function(){
 	<s:iterator value="shoppingCarList" var="shoppingCar">
 	<table cellpadding="0" cellspacing="0" class="gwc_tb2">
 		<tr>
-			<td class="tb2_td1"><input type="checkbox" class="newslist-1" name="<s:property value="#shoppingCar.id"/>" /></td>
+			<td class="tb2_td1"><input type="checkbox" value="1" name="<s:property value="#shoppingCar.id"/>" class="newslist-1" /></td>
 			<td class="tb2_td2"><a href="#"><img src="images/<s:property value="#shoppingCar.car.poster"/>"/></a></td>
 			<td class="tb2_td3"><a href="#"><s:property value="#shoppingCar.car.brand"/></a></td>
 			<td class="tb1_td4"><s:property value="#shoppingCar.carSize.size.size"/></td>
 			<td class="tb1_td5">
-				<input id="min1" name=""  style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="-" />
-				<input id="text_box1" id="quantity<s:property value="#shoppingCar.id"/>" name="" type="text" value="#shoppingCar.quantity" style=" width:30px; text-align:center; border:1px solid #ccc;" />
-				<input id="add1" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
+			<input type="hidden" class="money" value="<s:property value="#shoppingCar.car.money"/>">
+				<input id="min1" name="" onclick="min1(this)"  style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="-" />
+				<input id="text_box1" name="" type="text" value="<s:property value="#shoppingCar.quantity"/>" style=" width:30px; text-align:center; border:1px solid #ccc;" />
+				<input id="add1" name="" onclick="add(this)" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
 			</td>
 			<td class="tb1_td6"><label id="total1" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"><s:property value="#shoppingCar.car.money"/>$</label></td>
 			<td class="tb1_td7"><a href="#">Delete</a></td>
@@ -125,101 +116,82 @@ $(function(){
 	
 	</s:iterator>
 		   
-	<%--<!---商品加减算总数---->
-	<script type="text/javascript">
-	$(function () {
-		var t = $("#text_box1");
-		$("#add1").click(function () {
-			t.val(parseInt(t.val()) + 1)
-			setTotal(); GetCount();
-		})
-		$("#min1").click(function () {
-			t.val(parseInt(t.val()) - 1)
-			setTotal(); GetCount();
-		})
-		function setTotal() {
-
-			$("#total1").jsp((parseInt(t.val()) * 9).toFixed(2));
-			$("#newslist-1").val(parseInt(t.val()) * 9);
-		}
-		setTotal();
-	})
-	</script>
-	
-	<table cellpadding="0" cellspacing="0" class="gwc_tb2">
-		<tr>
-			<td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-1" /></td>
-			<td class="tb2_td2"><a href="#"><img src="images/img1.jpg"/></a></td>
-			<td class="tb2_td3"><a href="#">产品标题</a></td>
-			<td class="tb1_td4">一件</td>
-			<td class="tb1_td5">
-				<input id="min1" name=""  style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="-" />
-				<input id="text_box1" name="" type="text" value="1" style=" width:30px; text-align:center; border:1px solid #ccc;" />
-				<input id="add1" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
-			</td>
-			<td class="tb1_td6"><label id="total1" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
-			<td class="tb1_td7"><a href="#">删除</a></td>
-		</tr>
-	</table>
-	
 	<!---商品加减算总数---->
 	<script type="text/javascript">
 	$(function () {
-		var t = $("#text_box2");
-		$("#add2").click(function () {
-			t.val(parseInt(t.val()) + 1)
-			setTotal(); GetCount();
-		})
-		$("#min2").click(function () {
-			t.val(parseInt(t.val()) - 1)
-			setTotal(); GetCount();
-		})
-		function setTotal() {
-
-			$("#total2").jsp((parseInt(t.val()) * 8).toFixed(2));
-			$("#newslist-2").val(parseInt(t.val()) * 8);
-		}
-		setTotal();
-	})
-	</script>
-	<table cellpadding="0" cellspacing="0" class="gwc_tb2">
-		<tr>
-			<td class="tb2_td1"><input type="checkbox" value="1" name="newslist" id="newslist-2" /></td>
-			<td class="tb2_td2"><a href="#"><img src="images/img2.jpg"/></a></td>
-			<td class="tb2_td3"><a href="#">productTitle</a></td>
-			<td class="tb1_td4">Piece</td>
-			<td class="tb1_td5">
-				<input id="min2" name=""  style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="-" />
-				<input id="text_box2" name="" type="text" value="1" style=" width:30px; text-align:center; border:1px solid #ccc;" />
-				<input id="add2" name="" style=" width:20px; height:18px;border:1px solid #ccc;" type="button" value="+" />
-			</td>
-			<td class="tb1_td6"><label id="total2" class="tot" style="color:#ff5500;font-size:14px; font-weight:bold;"></label></td>
-			<td class="tb1_td7"><a href="#">delete</a></td>
-		</tr>
-	</table>
-	
-	--%><!---总数---->
-	<script type="text/javascript">
-	$(function () {
-		$("#Checkbox1").click(function () {
-			setTotal();
-			//alert($(lens[0]).text());
+		var t = $("#text_box1");
+		
+		$("#Checkbox1").click(function(){
+			var ch=this.checked;
+			$(".newslist-1").each(function(){
+				this.checked=ch;
+			});
 		});
-		function setTotal() {
-			var len = $(".tot");
-			var num = 0;
-			for (var i = 0; i < len.length; i++) {
-				alert($(len[i]).html());
-				num = parseInt(num) + parseInt($(len[i]).html());
-
+		
+		$(".newslist-1").click(function(){
+			if(!this.checked){
+				$("#Checkbox1").attr("checked","");
+			}else{
+				allMoney();
+				$("#jz1").css("display", "none");
+				$("#jz2").css("display", "block");
 			}
-			//alert(len.length);
-			$("#zong1").text(parseInt(num).toFixed(2));
-			$("#shuliang").text(len.length);
-		}
-		//setTotal();
+		});
+		
+		$("#jz2").click(function(){
+			var ids="";
+			var quans="";
+			if(isSubmit()){
+				$(".newslist-1").each(function(){
+					if(this.checked){
+						ids= ids+$(this).attr("name")+",";
+					    quans=quans+$(this).parent().parent().children(".tb1_td5").children("#text_box1").val()+",";
+					}
+				});
+				location.href="shoppingcar_addToBusiness.action?ids="+ids+"&quantities="+quans;
+			}else{
+				alert("Please check the Car !!!");
+			}
+		});
 	})
+	
+	function allMoney(){
+		var moneys=0;
+		$(".newslist-1").each(function(){
+			if(this.checked){
+				var money=$(this).parent().parent().children(".tb1_td5").children(".money").val();
+			    var quans=$(this).parent().parent().children(".tb1_td5").children("#text_box1").val();
+			    moneys=moneys+parseInt(quans)*parseInt(money);
+			}
+		});
+		$("#zong1").html(moneys.toFixed(2));
+	}
+	
+	function isSubmit(){
+		var len=$(".newslist-1:checked").length;
+		if(len!=0){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	
+	function add(obj){
+		var value=$(obj).prev().val();
+		$(obj).prev().val(parseInt(value)+1);
+		allMoney();
+	}
+	
+	function min1(obj){
+		var value=$(obj).next().val();
+		if(parseInt(value)>1){
+		$(obj).next().val(parseInt(value)-1);
+		}
+		allMoney();
+	}
 	</script>
+	<!---总数---->
+	
 	<table cellpadding="0" cellspacing="0" class="gwc_tb3">
 		<tr>
 			<td class="tb1_td1"></td>

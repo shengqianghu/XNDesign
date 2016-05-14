@@ -24,6 +24,7 @@
 			<param name="ignorehierarchy">false</param>
 			</result>
 			<result name="selectAll">/mycar.jsp</result>
+			<result name="addToBusiness">/checkout_success.jsp</result>
 		</action>
 	</package>
 </struts>

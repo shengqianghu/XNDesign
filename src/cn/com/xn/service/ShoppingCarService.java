@@ -68,8 +68,10 @@ public class ShoppingCarService {
 	public void queryCount(Customer customer){
 		String hql="from ShoppingCar b where 1=1 and b.customer.id="+customer.getId();
 		List<ShoppingCar> list=shoppingCarDao.listShoppingCar(hql, null);
-		ActionContext.getContext().getSession().put("shoppingCar", list.size());
+		ActionContext.getContext().getSession().put("commodiety_counts", list.size());
 	}
+	
+	
 	
 	/**
 	 * 通过分页的形式查询
